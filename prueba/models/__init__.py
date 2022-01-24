@@ -1,0 +1,1 @@
+from prueba.models.student import Studient
