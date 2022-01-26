@@ -55,7 +55,7 @@ ROOT_URLCONF = 'wakana.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['prueba.templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

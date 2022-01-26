@@ -2,12 +2,13 @@ from datetime import datetime
 
 
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 import json
 
 from django.contrib.auth.models import User
 
-from prueba.models import Studient
+from prueba.models.student import Studient
 
 
 @csrf_exempt
@@ -25,7 +26,7 @@ def index(request):
         s.birthday = datetime.now()
 
         if Studient.objects.filter(name=s.name).exists():
-            return HttpResponse("Existe")
+            return render(request,'Hello.html')
 
         s.save()
         return HttpResponse("guardado.")
